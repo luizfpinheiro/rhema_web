@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Rhema Ministério Apostólico</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-</head>
-<body>
- <div id="app">
-   <v-app light>
+<template>
+  <v-app>
     <v-toolbar color="white">
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <div class="flex-grow-1"></div>
@@ -22,25 +11,15 @@
     </v-toolbar>
     <v-content>
       <section>
-        <v-parallax src="assets/rhema.jpg" height="400">
-          <v-layout
-            column
-            align-center
-            justify-center
-            class="white--text"
-          >
-            <img src="assets/rhema_logo.png" alt="Rhema Ministério Apostólico" height="250">
+        <v-parallax src="./assets/rhema.jpg" height="400">
+          <v-layout column align-center justify-center class="white--text">
+            <img src="./assets/rhema_logo.png" alt="Rhema Ministério Apostólico" height="250" />
           </v-layout>
         </v-parallax>
       </section>
 
       <section>
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
+        <v-layout column wrap class="my-12" align-center>
           <v-flex xs12 sm4 class="my-4">
             <div class="text-center">
               <h2 class="headline">Transformando Vidas pela Palavra</h2>
@@ -101,7 +80,7 @@
       </section>
 
       <section>
-        <v-parallax src="assets/section.jpg" height="380">
+        <v-parallax src="./assets/rhema.jpg" height="380">
           <v-layout column align-center justify-center>
             <div class="headline white--text mb-4 text-center">Web development has never been easier</div>
             <em>Kick-start your application today</em>
@@ -111,9 +90,7 @@
               dark
               large
               href="/pre-made-themes"
-            >
-              Get Started
-            </v-btn>
+            >Get Started</v-btn>
           </v-layout>
         </v-parallax>
       </section>
@@ -124,13 +101,9 @@
             <v-flex xs12 sm4>
               <v-card flat class="transparent">
                 <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Company info</div>
+                  <div class="headline">Faça-nos uma visita!</div>
                 </v-card-title>
-                <v-card-text>
-                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                </v-card-text>
+				<MapsLocation/>
               </v-card>
             </v-flex>
             <v-flex xs12 sm4 offset-sm1>
@@ -138,9 +111,7 @@
                 <v-card-title primary-title class="layout justify-center">
                   <div class="headline">Fale Conosco</div>
                 </v-card-title>
-                <v-card-text>
-                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                </v-card-text>
+                <v-card-text>Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.</v-card-text>
                 <v-list class="transparent">
                   <v-list-item>
                     <v-list-item-action>
@@ -155,8 +126,10 @@
                       <v-icon class="blue--text text--lighten-2">mdi-map-marker</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                      <v-list-item-title>Taguatinga Norte, Brasília-DF</v-list-item-title>
-                    </v-list-item-content>
+                      <v-list-item-title>SDE Quadra 1 Conjunto D Lote 06</v-list-item-title>
+                      <v-list-item-title>M Norte, Taguatinga Norte, Brasília - DF</v-list-item-title>
+	
+					</v-list-item-content>
                   </v-list-item>
                   <v-list-item>
                     <v-list-item-action>
@@ -172,22 +145,22 @@
           </v-layout>
         </v-container>
       </section>
-
     </v-content>
   </v-app>
- </div>
- <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
- <script>
-   new Vue({
-    el: '#app',
-    vuetify: new Vuetify(),
-    data () {
-      return {
-        title: ''
-      }
-    }
+</template>
+
+<script>
+import HelloWorld from "./components/HelloWorld";
+import MapsLocation from "./components/MapsLocation"
+
+export default {
+  name: "App",
+  components: {
+	HelloWorld,
+	MapsLocation
+  },
+  data: () => ({
+    //
   })
- </script>
-</body>
-</html>
+};
+</script>
