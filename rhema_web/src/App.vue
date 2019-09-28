@@ -6,7 +6,9 @@
       <v-toolbar-items>
         <v-btn text>SOBRE A RHEMA</v-btn>
         <v-btn text>ESCOLA BÍBLICA</v-btn>
-        <v-btn text>AGENDA</v-btn>
+        <v-btn text><CalendarModal/></v-btn>
+          
+        
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
@@ -34,7 +36,7 @@
                       <v-icon x-large class="blue--text text--lighten-2">mdi-palette</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Material Design</div>
+                      <div class="headline text-center">Valor</div>
                     </v-card-title>
                     <v-card-text>
                       Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
@@ -49,7 +51,7 @@
                       <v-icon x-large class="blue--text text--lighten-2">mdi-flash</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Fast development</div>
+                      <div class="headline">Missão</div>
                     </v-card-title>
                     <v-card-text>
                       Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
@@ -64,7 +66,7 @@
                       <v-icon x-large class="blue--text text--lighten-2">mdi-wrench</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Completely Open Sourced</div>
+                      <div class="headline text-center">Visão</div>
                     </v-card-title>
                     <v-card-text>
                       Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
@@ -82,7 +84,7 @@
       <section>
         <v-parallax src="./assets/rhema.jpg" height="380">
           <v-layout column align-center justify-center>
-            <div class="headline white--text mb-4 text-center">Web development has never been easier</div>
+            <div class="headline white--text mb-4 text-center">Uma igreja na Visão Celular no Modelo dos 12</div>
             <em>Kick-start your application today</em>
             <v-btn
               class="mt-12"
@@ -103,7 +105,8 @@
                 <v-card-title primary-title class="layout justify-center">
                   <div class="headline">Faça-nos uma visita!</div>
                 </v-card-title>
-				<MapsLocation/>
+                <v-card-text></v-card-text>
+                <MapsLocation />
               </v-card>
             </v-flex>
             <v-flex xs12 sm4 offset-sm1>
@@ -111,7 +114,7 @@
                 <v-card-title primary-title class="layout justify-center">
                   <div class="headline">Fale Conosco</div>
                 </v-card-title>
-                <v-card-text>Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.</v-card-text>
+                <v-card-text></v-card-text>
                 <v-list class="transparent">
                   <v-list-item>
                     <v-list-item-action>
@@ -128,8 +131,7 @@
                     <v-list-item-content>
                       <v-list-item-title>SDE Quadra 1 Conjunto D Lote 06</v-list-item-title>
                       <v-list-item-title>M Norte, Taguatinga Norte, Brasília - DF</v-list-item-title>
-	
-					</v-list-item-content>
+                    </v-list-item-content>
                   </v-list-item>
                   <v-list-item>
                     <v-list-item-action>
@@ -150,14 +152,14 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-import MapsLocation from "./components/MapsLocation"
+import CalendarModal from "./components/CalendarModal";
+import MapsLocation from "./components/MapsLocation";
 
 export default {
   name: "App",
   components: {
-	HelloWorld,
-	MapsLocation
+    CalendarModal,
+    MapsLocation
   },
   data: () => ({
     //
