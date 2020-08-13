@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^4.0.0",
     "vuetify": "^2.0.0"
   },
   "devDependencies": {
